@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1.0.0-experimental
-FROM ghcr.io/cinnamon/kotaemon:feat-first_setup-full as base_image
+FROM ghcr.io/cinnamon/kotaemon:main-full as base_image
 
 RUN useradd -m -u 1000 user
 RUN --mount=type=ssh chown -R user:user /app

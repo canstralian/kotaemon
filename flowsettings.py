@@ -25,7 +25,7 @@ if not KH_APP_VERSION:
         KH_APP_VERSION = "local"
 
 KH_ENABLE_FIRST_SETUP = True
-KH_DEMO_MODE = config("KH_DEMO_MODE", default=False)
+KH_DEMO_MODE = config("KH_DEMO_MODE", default=False, cast=bool)
 
 # App can be ran from anywhere and it's not trivial to decide where to store app data.
 # So let's use the same directory as the flowsetting.py file.
