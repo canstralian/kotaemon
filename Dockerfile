@@ -7,9 +7,9 @@ RUN --mount=type=ssh chown -R user:user /usr/local/lib/python3.10
 USER user
 WORKDIR /app
 
-COPY flowsettings.py /app
 COPY app.py /app
 
 ENV GRADIO_SERVER_NAME=0.0.0.0
+ENV KH_FEATURE_USER_MANAGEMENT=false
 ENTRYPOINT ["python", "app.py"]
 EXPOSE 7860
